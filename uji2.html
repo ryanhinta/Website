@@ -1,0 +1,25 @@
+<div class="foto-container">
+  <img src="fotomuka.png" alt="Ryan Hinta" class="foto-profil">
+</div>
+<style>
+  /* 1. Definisikan Gerakan Animasinya */
+@keyframes munculTibaTiba {
+  from {
+    opacity: 0;                /* Tidak terlihat */
+    transform: translateY(30px) scale(0.9); /* Sedikit di bawah dan mengecil */
+  }
+  to {
+    opacity: 1;                /* Muncul sempurna */
+    transform: translateY(0) scale(1);    /* Kembali ke posisi & ukuran asli */
+  }
+}
+
+/* 2. Pasang Animasi ke Fotonya */
+.foto-profil {
+  width: 200px;                /* Sesuaikan ukuran */
+  border-radius: 20px;         /* Agar ujungnya tumpul seperti desainmu */
+  
+  /* Jalankan animasinya */
+  animation: munculTibaTiba 1.5s ease-out forwards;
+}
+</style>

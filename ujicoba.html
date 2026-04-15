@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Scroll Animation Loop</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #111;
+      color: white;
+    }
+
+    section {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2em;
+    }
+
+    .hidden {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 1s ease;
+    }
+
+    .show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <section>
+    <h1>Scroll ke bawah 👇</h1>
+  </section>
+
+  <section class="hidden">
+    <h1>Teks ini muncul saat discroll 😎</h1>
+  </section>
+
+  <section class="hidden">
+    <img src="rian.jpeg" width="250" style="border-radius:50px;">
+  </section>
+
+  
+  <section class="hidden">
+    <h1>Dan akan muncul lagi kalau lo scroll balik ke atas 🔁</h1>
+  </section>
+
+  <script>
+    const hiddenElements = document.querySelectorAll('.hidden');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        } else {
+          entry.target.classList.remove('show'); // ⬅️ ini yang bikin animasi bisa muncul ulang
+        }
+      });
+    }, {
+      threshold: 0.2 // 0.2 artinya animasi mulai saat 20% elemen masuk layar
+    });
+
+    hiddenElements.forEach((el) => observer.observe(el));
+  </script>
+</body>
+</html>
