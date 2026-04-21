@@ -6,11 +6,11 @@ body{
 .teks1{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     color: rgba(255, 255, 255, 0.768);
-   text-shadow: 1px 1px 2px black, 0 0 1em rgb(16, 16, 147);
-   display: flex;
-   padding-left: 20px;
-   font-size: 40px;
-   animation: teks 1s ease forwards;
+    text-shadow: 1px 1px 2px black, 0 0 1em rgb(16, 16, 147);
+    display: flex;
+    padding-left: 20px;
+    font-size: 40px;
+    animation: teks 1s ease forwards;
     opacity: 0;
     transform: translateY(20px);
 }
@@ -23,7 +23,7 @@ body{
 .teks2{
     font-family: "Bricolage Grotesque", sans-serif;
     color: white;
-    font-size: 15px;
+    font-size: 20px;
     animation: teks 1s ease forwards;
     text-decoration: none;
     opacity: 0;
@@ -47,7 +47,7 @@ body{
 .teks3{
     font-family: "Bricolage Grotesque", sans-serif;
     color: white;
-    font-size: 15px;
+    font-size: 20px;
     text-decoration: none;
     animation: teks 1s ease forwards;
     opacity: 0;
@@ -71,7 +71,7 @@ body{
 .teks4{
     font-family: "Bricolage Grotesque", sans-serif;
     color: white;
-    font-size: 15px;
+    font-size: 20px;
     text-decoration: none;
     animation: teks 1s ease forwards;
     opacity: 0;
@@ -336,7 +336,7 @@ body{
 }
 .aboutme{
     font-style: bold;
-    padding-top: 150px;
+    padding-top: 220px;
     font-family: "Saira", sans-serif;
     color: rgb(34, 131, 223);
     text-shadow: 1px 1px 2px black, 0 0 1em blue;
@@ -375,4 +375,17 @@ body{
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     backdrop-filter: blur(4px); 
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.footer{
+    background: linear-gradient(135deg, #0f2027, #000000,  #141448);
+    padding: 30px;
+   
+}
+.footerteks{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: rgba(255, 255, 255, 0.768);
+    font-size: 15px;
+}
+.copy{
+    margin-left: 400px;
 }
